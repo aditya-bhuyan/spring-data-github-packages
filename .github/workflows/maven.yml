@@ -24,6 +24,7 @@ jobs:
     - name: Check All Files
       run:
           ls -R
+          pwd
     - name: Check out the repo
       uses: actions/checkout@v2
     - name: Push to GitHub Packages
