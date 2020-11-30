@@ -27,6 +27,12 @@ jobs:
           pwd
     - name: Check out the repo
       uses: actions/checkout@v2
+    - name: Docker Build and Publish
+      run: |
+          ls -R
+          pwd
+          docker build -t docker.pkg.github.com/aditya-bhuyan/docker-images/spring-rest-demo:latest -f Dockerfile.mvn
+          docker images
     - name: Push to GitHub Packages
       uses: docker/build-push-action@v2
       with:
