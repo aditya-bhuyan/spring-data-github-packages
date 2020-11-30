@@ -18,10 +18,6 @@ jobs:
         with:
           arguments: build
           gradle-version: 6.4
-      - name: Check All Files
-        run: |
-            ls -R
-            pwd
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
@@ -32,7 +28,8 @@ jobs:
             ls -R
             pwd
             docker build -f Dockerfile.grdl -t docker.pkg.github.com/aditya-bhuyan/spring-rest-demo:latest .
-            docker images
+            docker images  docker.pkg.github.com/aditya-bhuyan/spring-rest-demo:latest
+            docker push
       - name: build-docker-image
         uses: docker/build-push-action@v2
         with:
