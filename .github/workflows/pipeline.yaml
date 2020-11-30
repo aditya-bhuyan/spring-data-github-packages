@@ -18,6 +18,9 @@ jobs:
         with:
           arguments: build
           gradle-version: 6.4
+      - name: Show all Files
+        run: 
+            ls -R | grep -i 'github-repo-0.0.1-SNAPSHOT.jar'
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
