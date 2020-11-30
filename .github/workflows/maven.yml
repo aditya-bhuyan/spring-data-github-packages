@@ -30,7 +30,7 @@ jobs:
     - name: Push to GitHub Packages
       uses: docker/build-push-action@v2
       with:
-        context: .
+        context: /home/runner/work/spring-data-github-packages/spring-data-github-packages
         file: ./Dockerfile.mvn
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
