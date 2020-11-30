@@ -1,4 +1,5 @@
 FROM adoptopenjdk:11-jre-openj9
-ARG JAR_FILE=/home/runner/work/spring-data-github-packages/spring-data-github-packages/target/github-repo-0.0.1-SNAPSHOT.jar
+##ARG JAR_FILE=/home/runner/work/spring-data-github-packages/spring-data-github-packages/target/github-repo-0.0.1-SNAPSHOT.jar
+ARG JAR_FILE=target/github-repo-0.0.1-SNAPSHOT.jar
 COPY ${JAR_FILE} app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
