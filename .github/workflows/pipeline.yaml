@@ -18,6 +18,9 @@ jobs:
         with:
           arguments: build
           gradle-version: 6.4
+      - name: Check All Files
+        run:
+             ls -R
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
