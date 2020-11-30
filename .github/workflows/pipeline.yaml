@@ -28,10 +28,10 @@ jobs:
           name: artifact
           path: build/libs/github-repo-0.0.1-SNAPSHOT.jar
       - name: Docker Build and Publish
-          run: |
+        run: |
             ls -R
             pwd
-            docker build -t docker.pkg.github.com/aditya-bhuyan/docker-images/spring-rest-demo:latest -f Dockerfile.grdl
+            docker build -t docker.pkg.github.com/aditya-bhuyan/spring-rest-demo:latest -f Dockerfile.grdl
             docker images
       - name: build-docker-image
         uses: docker/build-push-action@v2
