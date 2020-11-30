@@ -52,7 +52,7 @@
 		<repository>
 			<id>github</id>
 			<name>GitHub Packages</name>
-			<url>https://maven.pkg.github.com/aditya-bhuyan/docker-images/spring-rest-demo</url>
+			<url>https://maven.pkg.github.com/aditya-bhuyan/spring-rest-demo</url>
 		</repository>
 	</distributionManagement>
 
