@@ -31,7 +31,7 @@ jobs:
         run: |
             ls -R
             pwd
-            docker build -t spring-rest-demo:latest -f Dockerfile.grdl
+            docker build -t aditya-bhuyan/spring-rest-demo:latest -f Dockerfile.grdl
             docker images
       - name: build-docker-image
         uses: docker/build-push-action@v2

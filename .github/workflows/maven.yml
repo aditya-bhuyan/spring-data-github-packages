@@ -31,7 +31,7 @@ jobs:
       run: |
           ls -R
           pwd
-          docker build -t spring-rest-demo:latest -f Dockerfile.mvn
+          docker build -t aditya-bhuyan/spring-rest-demo:latest -f Dockerfile.mvn
           docker images
     - name: Push to GitHub Packages
       uses: docker/build-push-action@v2
