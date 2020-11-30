@@ -1,4 +1,4 @@
-name: Publish Docker image
+name: Pipeline for Publish Docker image
 
 on:
   push:
@@ -20,7 +20,7 @@ jobs:
           gradle-version: 6.4
       - name: Show all Files
         run: 
-            ls -R | grep -i 'github-repo-0.0.1-SNAPSHOT.jar'
+            ls -R 
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
