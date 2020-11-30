@@ -1,3 +1,4 @@
+# docker login https://docker.pkg.github.com -u ${{ secrets.DOCKER_USER_NAME }} -p ${{ secrets.DOCKER_PASSWORD }}
 name: Pipeline for Publish Docker image
 
 on:
@@ -28,7 +29,6 @@ jobs:
             ls -R
             pwd
             docker login https://docker.pkg.github.com -u ${{ github.actor }} -p  ${{ secrets.GITHUB_TOKEN }}
-# docker login https://docker.pkg.github.com -u ${{ secrets.DOCKER_USER_NAME }} -p ${{ secrets.DOCKER_PASSWORD }}
             docker build -f Dockerfile.grdl -t docker.pkg.github.com/adityapratapbhuyan/docker-images/spring-rest-demo:latest .
             docker images  
             docker push docker.pkg.github.com/adityapratapbhuyan/docker-images/spring-rest-demo:latest
