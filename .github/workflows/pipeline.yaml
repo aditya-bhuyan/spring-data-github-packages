@@ -31,13 +31,12 @@ jobs:
         run: |
             ls -R
             pwd
-            docker build -t docker.pkg.github.com/aditya-bhuyan/spring-rest-demo:latest -f Dockerfile.grdl
+            docker build -t spring-rest-demo:latest -f Dockerfile.grdl
             docker images
       - name: build-docker-image
         uses: docker/build-push-action@v2
         with:
-          context: /home/runner/work/spring-data-github-packages/spring-data-github-packages
-          file: /home/runner/work/spring-data-github-packages/spring-data-github-packages/Dockerfile.grdl
+          file: ./Dockerfile.grdl
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: docker.pkg.github.com
